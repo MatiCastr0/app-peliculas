@@ -1,0 +1,49 @@
+.pelicula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.pelicula-card {
+  background: linear-gradient(#790ffa, #1d1a42);
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 0px;
+  transition: transform 0.3s ease;
+}
+.pelicula-card:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.img-fluid {
+  border-radius: 20px 20px 0px 0px;
+}
+.contenido-card {
+  color: #fff;
+}
+.contenido-card h2 {
+  font-weight: bold;
+}
+.plataforma {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.plataforma-logo {
+  width: 70px;
+  height: 100%;
+  margin-left: 5px;
+}
+
+.pelicula-filtros {
+  color: #fff;
+  font-weight: 500;
+}
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: xx-large;
+}

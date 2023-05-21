@@ -1,0 +1,58 @@
+[
+  {
+    "nombre": "Shrek",
+    "imagen": "https://images.justwatch.com/poster/300781543/s592/shrek.webp",
+    "anio": 2001,
+    "genero": "Animacion",
+    "plataforma": "Netflix"
+  },
+  {
+    "nombre": "Ant-Man y la Avispa: Quantumanía",
+    "imagen": "https://pics.filmaffinity.com/Ant_Man_y_la_Avispa_Quantumanaia-585469373-large.jpg",
+    "anio": 2023,
+    "genero": "Comedia",
+    "plataforma": "Disney"
+  },
+  {
+    "nombre": "Sin novedad en el frente",
+    "imagen": "https://pics.filmaffinity.com/Sin_novedad_en_el_frente-474477682-large.jpg",
+    "anio": 2022,
+    "genero": "Accion",
+    "plataforma": "Netflix"
+  },
+  {
+    "nombre": "Argentina, 1985",
+    "imagen": "https://pics.filmaffinity.com/Argentina_1985-599655212-large.jpg",
+    "anio": 2022,
+    "genero": "Drama",
+    "plataforma": "Prime Video"
+  },
+  {
+    "nombre": "Interstellar",
+    "imagen": "https://pics.filmaffinity.com/Interstellar-366875261-large.jpg",
+    "anio": 2014,
+    "genero": "Comedia",
+    "plataforma": "Prime Video"
+  },
+  {
+    "nombre": "Relatos salvajes",
+    "imagen": "https://pics.filmaffinity.com/Relatos_salvajes-102488639-large.jpg",
+    "anio": 2014,
+    "genero": "Misterio",
+    "plataforma": "HBO"
+  },
+  {
+    "nombre": "Rocky",
+    "imagen": "https://www.themoviedb.org/t/p/w500/mQKvObSEYESsDQXFWxfe0FARIP7.jpg",
+    "anio": 1976,
+    "genero": "Drama",
+    "plataforma": "Paramount"
+  },
+  {
+    "nombre": "Fast & Furious 9",
+    "imagen": "https://pics.filmaffinity.com/Fast_Furious_9-833854731-large.jpg",
+    "anio": 2021,
+    "genero": "Aventura",
+    "plataforma": "Star"
+  }
+]

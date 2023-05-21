@@ -1,0 +1,133 @@
+<div class="container pt-5 pb-5">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary pb-5">
+    <a class="navbar-brand" href="/">WikiFilms</a>
+    <a type="button" class="btn btn-primary ms-auto" href="/cargar-pelicula">
+      Cargar Peliculas
+    </a>
+  </nav>
+
+  <!-- FILTRO DE BUSQUEDA -->
+  <div class="pelicula-filtros mb-5 row">
+    <h2>Filtrar por:</h2>
+
+    <div class="form-group col-4">
+      <label for="anio">Fecha de Estreno:</label>
+      <input
+        type="number"
+        id="anio"
+        class="form-control"
+        placeholder="Ingresar año"
+        [(ngModel)]="filtros.anio"
+        (change)="aplicarFiltros()"
+      />
+    </div>
+
+    <div class="form-group col-4">
+      <label for="genero">Género:</label>
+      <select
+        id="genero"
+        class="form-control"
+        [(ngModel)]="filtros.genero"
+        (change)="aplicarFiltros()"
+      >
+        <option value="">Todas</option>
+        <option value="Accion">Acción</option>
+        <option value="Animacion">Animación</option>
+        <option value="Crimen">Crimen</option>
+        <option value="Familia">Familia</option>
+        <option value="Misterio">Misterio</option>
+        <option value="Suspense">Suspense</option>
+        <option value="Aventura">Aventura</option>
+        <option value="Ciencia Ficcion">Ciencia Ficción</option>
+        <option value="Drama">Drama</option>
+        <option value="Fantasia">Fantasía</option>
+        <option value="Romance">Romance</option>
+        <option value="Aventura">Aventura</option>
+      </select>
+    </div>
+
+    <div class="form-group col-4">
+      <label for="plataforma">Plataforma:</label>
+      <select
+        id="plataforma"
+        class="form-control"
+        [(ngModel)]="filtros.plataforma"
+        (change)="aplicarFiltros()"
+      >
+        <option value="">Todas</option>
+        <option value="Netflix">Netflix</option>
+        <option value="Prime Video">Prime Video</option>
+        <option value="HBO">HBO</option>
+        <option value="Disney">Disney</option>
+        <option value="Directv">Directv</option>
+        <option value="Star">Star</option>
+        <option value="Paramount">Paramount</option>
+      </select>
+    </div>
+  </div>
+  <!-- FIN FILTRO DE BUSQUEDA -->
+
+  <!-- LISTA DE PELICULAS -->
+  <div class="pelicula-grid">
+    <div class="pelicula-card" *ngFor="let pelicula of peliculasFiltradas">
+      <img
+        [src]="pelicula.imagen"
+        alt="Imagen de la película"
+        class="img-fluid"
+      />
+      <div class="contenido-card m-3">
+        <h2>{{ pelicula.nombre }}</h2>
+        <p>Lanzamiento: {{ pelicula.anio }}</p>
+        <p>Género: {{ pelicula.genero }}</p>
+        <p>
+          Disponible en:
+          <span class="plataforma">
+            <img
+              class="plataforma-logo"
+              *ngIf="pelicula.plataforma === 'Netflix'"
+              src="../../assets/img/logo-netflix.png"
+              alt="Logo de Netflix"
+            />
+            <img
+              class="plataforma-logo"
+              *ngIf="pelicula.plataforma === 'Prime Video'"
+              src="../../assets/img/logo-prime.png"
+              alt="Logo de Prime Video"
+            />
+            <img
+              class="plataforma-logo"
+              *ngIf="pelicula.plataforma === 'HBO'"
+              src="../../assets/img/logo-hbomax.png"
+              alt="Logo de HBO Max"
+            />
+            <img
+              class="plataforma-logo"
+              *ngIf="pelicula.plataforma === 'Disney'"
+              src="../../assets/img/logo-disney.png"
+              alt="Logo de Disney"
+            />
+            <img
+              class="plataforma-logo"
+              *ngIf="pelicula.plataforma === 'Directv'"
+              src="../../assets/img/logo-directv.png"
+              alt="Logo de Directv GO"
+            />
+            <img
+              class="plataforma-logo"
+              *ngIf="pelicula.plataforma === 'Star'"
+              src="../../assets/img/logo-star.png"
+              alt="Logo de Star"
+            />
+            <img
+              class="plataforma-logo"
+              *ngIf="pelicula.plataforma === 'Paramount'"
+              src="../../assets/img/logo-paramount.png"
+              alt="Logo de Paramount"
+            />
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- FIN LISTA DE PELICULAS -->
+</div>
