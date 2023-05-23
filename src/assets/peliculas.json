@@ -54,5 +54,60 @@
     "anio": 2023,
     "genero": "Aventura",
     "plataforma": "Prime Video"
+  },{
+    "nombre": "Pulp Fiction",
+    "imagen": "https://r1.abcimg.es/resizer/resizer.php?imagen=https%3A%2F%2Fs3.abcstatics.com%2Fmedia%2Fpeliculas%2F000%2F000%2F344%2Fpulp-fiction-1.jpg&nuevoancho=683&medio=abc",
+    "anio": 1994,
+    "genero": "Crimen",
+    "plataforma": "Netflix"
+  },
+  {
+    "nombre": "El Padrino",
+    "imagen": "https://es.web.img3.acsta.net/pictures/18/06/12/12/12/0117051.jpg?coixp=49&coiyp=27",
+    "anio": 1972,
+    "genero": "Drama",
+    "plataforma": "Prime Video"
+  },
+  {
+    "nombre": "El Señor de los Anillos: La Comunidad del Anillo",
+    "imagen": "https://pics.filmaffinity.com/El_seanor_de_los_anillos_La_comunidad_del_anillo-744631610-large.jpg",
+    "anio": 2001,
+    "genero": "Fantasia",
+    "plataforma": "HBO"
+  },
+  {
+    "nombre": "Titanic",
+    "imagen": "https://es.web.img3.acsta.net/medias/nmedia/18/86/91/41/19870073.jpg",
+    "anio": 1997,
+    "genero": "Romance",
+    "plataforma": "Prime Video"
+  },
+  {
+    "nombre": "El Laberinto del Fauno",
+    "imagen": "https://es.web.img3.acsta.net/pictures/16/02/25/16/13/438033.jpg",
+    "anio": 2006,
+    "genero": "Fantasia",
+    "plataforma": "Netflix"
+  },
+  {
+    "nombre": "El Gran Gatsby",
+    "imagen": "https://pics.filmaffinity.com/El_gran_Gatsby-657534072-large.jpg",
+    "anio": 2013,
+    "genero": "Drama",
+    "plataforma": "Netflix"
+  },
+  {
+    "nombre": "La La Land",
+    "imagen": "https://pics.filmaffinity.com/La_ciudad_de_las_estrellas_La_La_Land-262021831-mmed.jpg",
+    "anio": 2016,
+    "genero": "Fantasia",
+    "plataforma": "Netflix"
+  },
+  {
+    "nombre": "El Caballero Oscuro",
+    "imagen": "https://pics.filmaffinity.com/the_dark_knight-102763119-mmed.jpg",
+    "anio": 2008,
+    "genero": "Accion",
+    "plataforma": "Prime Video"
   }
 ]
