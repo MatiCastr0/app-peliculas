@@ -46,4 +46,9 @@ export class ListaPeliculasComponent implements OnInit {
       return true;
     });
   }
+  eliminarPeliculas() {
+  localStorage.removeItem('peliculas');
+  console.log('Películas eliminadas del almacenamiento local');
+  location.reload();
+}
 }

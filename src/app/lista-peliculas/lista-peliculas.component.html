@@ -4,6 +4,9 @@
     <a type="button" class="btn btn-primary ms-auto" href="/cargar-pelicula">
       Cargar Peliculas
     </a>
+    <button class="btn btn-danger ms-2" (click)="eliminarPeliculas()">
+      Eliminar Películas
+    </button>
   </nav>
 
   <!-- FILTRO DE BUSQUEDA -->
@@ -69,65 +72,70 @@
 
   <!-- LISTA DE PELICULAS -->
   <div class="pelicula-grid">
-    <div class="pelicula-card" *ngFor="let pelicula of peliculasFiltradas">
-      <img
-        [src]="pelicula.imagen"
-        alt="Imagen de la película"
-        class="img-fluid"
-      />
-      <div class="contenido-card m-3">
-        <h2>{{ pelicula.nombre }}</h2>
-        <p>Lanzamiento: {{ pelicula.anio }}</p>
-        <p>Género: {{ pelicula.genero }}</p>
-        <p>
-          Disponible en:
-          <span class="plataforma">
-            <img
-              class="plataforma-logo"
-              *ngIf="pelicula.plataforma === 'Netflix'"
-              src="../../assets/img/logo-netflix.png"
-              alt="Logo de Netflix"
-            />
-            <img
-              class="plataforma-logo"
-              *ngIf="pelicula.plataforma === 'Prime Video'"
-              src="../../assets/img/logo-prime.png"
-              alt="Logo de Prime Video"
-            />
-            <img
-              class="plataforma-logo"
-              *ngIf="pelicula.plataforma === 'HBO'"
-              src="../../assets/img/logo-hbomax.png"
-              alt="Logo de HBO Max"
-            />
-            <img
-              class="plataforma-logo"
-              *ngIf="pelicula.plataforma === 'Disney'"
-              src="../../assets/img/logo-disney.png"
-              alt="Logo de Disney"
-            />
-            <img
-              class="plataforma-logo"
-              *ngIf="pelicula.plataforma === 'Directv'"
-              src="../../assets/img/logo-directv.png"
-              alt="Logo de Directv GO"
-            />
-            <img
-              class="plataforma-logo"
-              *ngIf="pelicula.plataforma === 'Star'"
-              src="../../assets/img/logo-star.png"
-              alt="Logo de Star"
-            />
-            <img
-              class="plataforma-logo"
-              *ngIf="pelicula.plataforma === 'Paramount'"
-              src="../../assets/img/logo-paramount.png"
-              alt="Logo de Paramount"
-            />
-          </span>
-        </p>
+    <ng-container *ngIf="peliculasFiltradas.length > 0; else noPeliculas">
+      <div class="pelicula-card" *ngFor="let pelicula of peliculasFiltradas">
+        <img
+          [src]="pelicula.imagen"
+          alt="Imagen de la película"
+          class="img-fluid"
+        />
+        <div class="contenido-card m-3">
+          <h2>{{ pelicula.nombre }}</h2>
+          <p>Lanzamiento: {{ pelicula.anio }}</p>
+          <p>Género: {{ pelicula.genero }}</p>
+          <p>
+            Disponible en:
+            <span class="plataforma">
+              <img
+                class="plataforma-logo"
+                *ngIf="pelicula.plataforma === 'Netflix'"
+                src="../../assets/img/logo-netflix.png"
+                alt="Logo de Netflix"
+              />
+              <img
+                class="plataforma-logo"
+                *ngIf="pelicula.plataforma === 'Prime Video'"
+                src="../../assets/img/logo-prime.png"
+                alt="Logo de Prime Video"
+              />
+              <img
+                class="plataforma-logo"
+                *ngIf="pelicula.plataforma === 'HBO'"
+                src="../../assets/img/logo-hbomax.png"
+                alt="Logo de HBO Max"
+              />
+              <img
+                class="plataforma-logo"
+                *ngIf="pelicula.plataforma === 'Disney'"
+                src="../../assets/img/logo-disney.png"
+                alt="Logo de Disney"
+              />
+              <img
+                class="plataforma-logo"
+                *ngIf="pelicula.plataforma === 'Directv'"
+                src="../../assets/img/logo-directv.png"
+                alt="Logo de Directv GO"
+              />
+              <img
+                class="plataforma-logo"
+                *ngIf="pelicula.plataforma === 'Star'"
+                src="../../assets/img/logo-star.png"
+                alt="Logo de Star"
+              />
+              <img
+                class="plataforma-logo"
+                *ngIf="pelicula.plataforma === 'Paramount'"
+                src="../../assets/img/logo-paramount.png"
+                alt="Logo de Paramount"
+              />
+            </span>
+          </p>
+        </div>
       </div>
-    </div>
+    </ng-container>
+    <ng-template #noPeliculas>
+      <div class="alert alert-info">No se encontraron películas.</div>
+    </ng-template>
   </div>
-  <!-- FIN LISTA DE PELICULAS -->
 </div>
+<!-- FIN LISTA DE PELICULAS -->
